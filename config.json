@@ -2,26 +2,125 @@
   "core": {
     "allowRun": true,
     "enable": true,
-    "maintenance": false
+    "maintenance": false,
+    "minAppVersion": "1.0.0",
+    "forceUpdate": false,
+    "shutdownMessage": "Server maintenance"
   },
+
   "crash": {
     "blockCrash": true,
     "autoRestart": false,
-    "maxRetry": 3
+    "maxRetry": 3,
+    "cooldownSeconds": 10,
+    "reportOnCrash": true
   },
+
   "security": {
     "antiDebug": true,
-    "antiFrida": true
+    "antiFrida": true,
+    "antiHook": true,
+    "antiDump": false,
+    "antiEmulator": false,
+    "verifySignature": false,
+    "checkRoot": false
   },
+
+  "network": {
+    "timeoutMs": 8000,
+    "retry": 2,
+    "useHttps": true,
+    "pinning": false,
+    "fallbackUrls": [
+      "https://raw.githubusercontent.com/bokepppk6-ai/Bypass/main/config.json"
+    ]
+  },
+
   "feature": {
-    "aimbot": true,
-    "esp": true,
-    "skin": true,
-    "bypass": true,
+    "aimbot": {
+      "enable": true,
+      "maxFov": 300,
+      "smooth": 0.35,
+      "visibleCheck": true,
+      "ignoreBot": true
+    },
+    "esp": {
+      "enable": true,
+      "box": true,
+      "line": true,
+      "health": true,
+      "distance": true
+    },
+    "skin": {
+      "enable": true,
+      "forceApply": false
+    },
+    "bypass": {
+      "enable": true,
+      "safeMode": true
+    },
     "antiReport": true,
     "antiCheat": false
   },
+
+  "limits": {
+    "maxSessionMinutes": 180,
+    "maxLoginPerDay": 10,
+    "maxDevices": 1
+  },
+
+  "ui": {
+    "theme": "dark",
+    "accentColor": "#4FA3FF",
+    "windowRounding": 22,
+    "animations": true,
+    "showWatermark": true
+  },
+
+  "schedule": {
+    "enabled": false,
+    "start": "00:00",
+    "end": "23:59",
+    "timezone": "UTC+7"
+  },
+
+  "update": {
+    "autoCheck": true,
+    "channel": "stable",
+    "checkIntervalHours": 6
+  },
+
+  "license": {
+    "requireKey": true,
+    "onlineVerify": true,
+    "gracePeriodHours": 24
+  },
+
+  "region": {
+    "allowed": ["ID", "SG", "MY"],
+    "blocked": []
+  },
+
+  "performance": {
+    "lowLatency": true,
+    "maxFps": 120,
+    "cpuLimit": 80
+  },
+
+  "telemetry": {
+    "enable": false,
+    "sendErrors": true,
+    "sendUsage": false
+  },
+
+  "fallback": {
+    "useLocalConfig": true,
+    "localConfigPath": "/data/local/tmp/config.json"
+  },
+
   "log": {
-    "enable": true
+    "enable": true,
+    "level": "info",
+    "saveToFile": false
   }
 }
