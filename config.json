@@ -1,8 +1,3 @@
-//BYPASS ZERO 
-
-
-
-
 {
   "core": {
     "allowRun": true,
@@ -13,6 +8,7 @@
     "shutdownMessage": "Server maintenance",
     "serverTimeSync": true,
     "heartbeatSeconds": 30
+    "bypasszero": true,
   },
 
   "crash": {
