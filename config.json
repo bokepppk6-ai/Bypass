@@ -1,3 +1,8 @@
+BYPASS ZERO 
+
+
+
+
 {
   "core": {
     "allowRun": true,
@@ -5,7 +10,9 @@
     "maintenance": false,
     "minAppVersion": "1.0.0",
     "forceUpdate": false,
-    "shutdownMessage": "Server maintenance"
+    "shutdownMessage": "Server maintenance",
+    "serverTimeSync": true,
+    "heartbeatSeconds": 30
   },
 
   "crash": {
@@ -13,7 +20,8 @@
     "autoRestart": false,
     "maxRetry": 3,
     "cooldownSeconds": 10,
-    "reportOnCrash": true
+    "reportOnCrash": true,
+    "silentMode": true
   },
 
   "security": {
@@ -23,7 +31,9 @@
     "antiDump": false,
     "antiEmulator": false,
     "verifySignature": false,
-    "checkRoot": false
+    "checkRoot": false,
+    "scanIntervalSeconds": 20,
+    "killOnDetect": false
   },
 
   "network": {
@@ -31,6 +41,7 @@
     "retry": 2,
     "useHttps": true,
     "pinning": false,
+    "dnsOverHttps": false,
     "fallbackUrls": [
       "https://raw.githubusercontent.com/bokepppk6-ai/Bypass/main/config.json"
     ]
@@ -42,31 +53,39 @@
       "maxFov": 300,
       "smooth": 0.35,
       "visibleCheck": true,
-      "ignoreBot": true
+      "ignoreBot": true,
+      "bonePriority": ["head", "neck", "chest"],
+      "prediction": false
     },
     "esp": {
       "enable": true,
       "box": true,
       "line": true,
       "health": true,
-      "distance": true
+      "distance": true,
+      "name": true,
+      "weapon": false
     },
     "skin": {
       "enable": true,
-      "forceApply": false
+      "forceApply": false,
+      "syncOnSpawn": true
     },
     "bypass": {
       "enable": true,
-      "safeMode": true
+      "safeMode": true,
+      "stealthLevel": 2
     },
     "antiReport": true,
-    "antiCheat": false
+    "antiCheat": false,
+    "autoDisableOnSpectate": true
   },
 
   "limits": {
     "maxSessionMinutes": 180,
     "maxLoginPerDay": 10,
-    "maxDevices": 1
+    "maxDevices": 1,
+    "cooldownAfterLogout": 60
   },
 
   "ui": {
@@ -74,53 +93,77 @@
     "accentColor": "#4FA3FF",
     "windowRounding": 22,
     "animations": true,
-    "showWatermark": true
+    "showWatermark": true,
+    "language": "id",
+    "fpsCounter": false
   },
 
   "schedule": {
     "enabled": false,
     "start": "00:00",
     "end": "23:59",
-    "timezone": "UTC+7"
+    "timezone": "UTC+7",
+    "weekendOnly": false
   },
 
   "update": {
     "autoCheck": true,
     "channel": "stable",
-    "checkIntervalHours": 6
+    "checkIntervalHours": 6,
+    "deltaUpdate": false
   },
 
   "license": {
     "requireKey": true,
     "onlineVerify": true,
-    "gracePeriodHours": 24
+    "gracePeriodHours": 24,
+    "bindDevice": true,
+    "bindRegion": false
   },
 
   "region": {
     "allowed": ["ID", "SG", "MY"],
-    "blocked": []
+    "blocked": [],
+    "autoDetect": true
   },
 
   "performance": {
     "lowLatency": true,
     "maxFps": 120,
-    "cpuLimit": 80
+    "cpuLimit": 80,
+    "gpuLimit": 85,
+    "adaptiveQuality": true
   },
 
   "telemetry": {
     "enable": false,
     "sendErrors": true,
-    "sendUsage": false
+    "sendUsage": false,
+    "anonymize": true
   },
 
   "fallback": {
     "useLocalConfig": true,
-    "localConfigPath": "/data/local/tmp/config.json"
+    "localConfigPath": "/data/local/tmp/config.json",
+    "cacheLastGood": true
+  },
+
+  "killswitch": {
+    "remoteDisable": false,
+    "message": "Disabled by admin",
+    "graceSeconds": 5
+  },
+
+  "experiment": {
+    "enable": false,
+    "groups": ["A"],
+    "rolloutPercent": 100
   },
 
   "log": {
     "enable": true,
     "level": "info",
-    "saveToFile": false
+    "saveToFile": false,
+    "maxFileSizeKb": 512
   }
 }
