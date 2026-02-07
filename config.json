@@ -1,5 +1,26 @@
 {
-  "allowRun": true,
-  "blockCrash": true,
-  "enable": true
+  "core": {
+    "allowRun": true,
+    "enable": true,
+    "maintenance": false
+  },
+  "crash": {
+    "blockCrash": true,
+    "autoRestart": false,
+    "maxRetry": 3
+  },
+  "security": {
+    "antiDebug": true,
+    "antiFrida": true
+  },
+  "feature": {
+    "aimbot": true,
+    "esp": true,
+    "skin": true,
+    "bypass": true,
+    "antiReport": true
+  },
+  "log": {
+    "enable": true
+  }
 }
