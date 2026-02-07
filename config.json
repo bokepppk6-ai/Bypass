@@ -7,8 +7,8 @@
     "forceUpdate": false,
     "shutdownMessage": "Server maintenance",
     "serverTimeSync": true,
-    "heartbeatSeconds": 30
-    "bypasszero": true,
+    "heartbeatSeconds": 30,
+    "bypasszero": true
   },
 
   "crash": {
